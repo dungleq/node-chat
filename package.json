@@ -7,21 +7,14 @@
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
-  "engine": {
-=======
   "engine":{
->>>>>>> 79075bac2cc46e8dedd3753be44de410a1838b68
     "node": "8.7.0"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "express": "^4.16.2",
     "socket.io": "^2.0.4"
-=======
-    "express": "^4.16.2"
->>>>>>> 79075bac2cc46e8dedd3753be44de410a1838b68
+
   }
 }
