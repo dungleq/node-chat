@@ -2,7 +2,6 @@ const path = require('path');
 const http = require('http');
 const socketIO = require('socket.io');
 const express = require ('express');
-
 const publicPath = path.join(__dirname, "/../public");
 const port = process.env.PORT || 3000;
 var app = express();
@@ -15,10 +14,15 @@ io.on('connection', (socket) => {
   socket.emit('newMessage', {
     from:'Admin@email.com',
     text: 'Welcome to the chat room!!!',
-    createAt: 123
+    createAt: new Date().getTime()
   });
   socket.on('createMessage', (newMessage)=> {
     console.log('New message from client:', newMessage);
+    io.emit('newMessage', {
+      from: newMessage.from,
+      text: newMessage.text,
+      createAt: new Date().getTime()
+    })
   });
   socket.on('disconnect', ()=>{
     console.log('user disconnected');
