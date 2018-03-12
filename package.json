@@ -1,13 +1,12 @@
 {
   "name": "chat-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engine":{
+  "engine": {
     "node": "8.7.0"
   },
   "author": "",
@@ -15,6 +14,15 @@
   "dependencies": {
     "express": "^4.16.2",
     "socket.io": "^2.0.4"
-
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dungleq/node-chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dungleq/node-chat/issues"
+  },
+  "homepage": "https://github.com/dungleq/node-chat#readme",
+  "description": ""
 }
