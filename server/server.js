@@ -3,8 +3,6 @@ const http = require('http');
 const socketIO = require('socket.io');
 const express = require ('express');
 const publicPath = path.join(__dirname, "/../public");
-
-console.log(publicPath);
 const port = process.env.PORT || 8000;
 var app = express();
 var server =http.createServer(app);
