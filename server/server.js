@@ -10,7 +10,6 @@ var io = socketIO(server);
 
 app.use(express.static(publicPath));
 io.on('connection', (socket) => {
-  console.log('Users connected to chat room');
   socket.emit('newMessage', {
     from:'Admin@email.com',
     text: 'Welcome to the chat room!!!',
