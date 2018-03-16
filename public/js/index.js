@@ -1,9 +1,15 @@
 var socket = io();
 socket.on ('connect', function () {
-  console.log('connected to chat room');
-});
+  });
 socket.on('newMessage', function (message) {
   console.log('New message:',message);
+});
+
+socket.emit('createMessage', {
+  from:'Danny',
+  text: 'hello'
+}, function (data) {
+  console.log(data)
 });
 
 socket.on('disconnect', function () {

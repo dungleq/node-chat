@@ -15,13 +15,15 @@ io.on('connection', (socket) => {
     text: 'Welcome to the chat room!!!',
     createAt: new Date().getTime()
   });
-  socket.on('createMessage', (newMessage)=> {
+  socket.on('createMessage', (newMessage, callback)=> {
+    callback('This is ack from server');
     console.log('New message from client:', newMessage);
-    io.emit('newMessage', {
+        io.emit('newMessage', {
       from: newMessage.from,
       text: newMessage.text,
       createAt: new Date().getTime()
     })
+
   });
   socket.on('disconnect', ()=>{
     console.log('user disconnected');
